@@ -1,0 +1,64 @@
+'.source.ada':
+  'access':
+    'prefix': 'acc'
+    'body': 'access '
+  'aliased':
+    'prefix': 'ali'
+    'body': 'aliased '
+  'begin … end':
+    'prefix': 'beg'
+    'body': 'begin\n\t$0\nend;'
+  'case … is … end case;':
+    'prefix': 'case'
+    'body': 'case $1 is\n\t$0\nend case;'
+  'elsif … then':
+    'prefix': 'eli'
+    'body': 'elsif $1 then\n\t$0'
+  'for … loop … end loop':
+    'prefix': 'for'
+    'body': 'for $1 in $2 loop\n\t$0\nend loop;'
+  'function … end':
+    'prefix': 'fun'
+    'body': 'function ${1:name} return $2 is\n\t$3\nbegin -- $1\n\t$0\nend $1;'
+  'if … end if':
+    'prefix': 'if'
+    'body': 'if $1 then\n\t$0\nend if;'
+  'loop … end loop':
+    'prefix': 'loop'
+    'body': 'loop\n\t$0\nend loop;'
+  'package … end':
+    'prefix': 'pac'
+    'body': 'package ${1:name} is\n\t$0\nend $1;'
+  'package … is …':
+    'prefix': 'pne'
+    'body': 'package $1 is $0'
+  'package body … end':
+    'prefix': 'pbo'
+    'body': 'package body ${1:name} is\n\t$0\nend $1;'
+  'procedure … end':
+    'prefix': 'pro'
+    'body': 'procedure ${1:Procedure} is\n\t$2\nbegin -- ${1/([a-zA-Z0-9_]*).*$/$1/}\n\t$0\nend ${1/([a-zA-Z0-9_]*).*$/$1/};'
+  'record … end record':
+    'prefix': 'rec'
+    'body': 'record\n\t$0\nend record;'
+  'return …;':
+    'prefix': 'ret'
+    'body': 'return $1;'
+  'type … is …':
+    'prefix': 'ty'
+    'body': 'type $1 is $0'
+  'use …;':
+    'prefix': 'u'
+    'body': 'use $1;'
+  'when … =>':
+    'prefix': 'when'
+    'body': 'when $1 =>\n\t$0'
+  'while … loop … end loop':
+    'prefix': 'whi'
+    'body': 'while $1 loop\n\t$0\nend loop;'
+  'with …; use …;':
+    'prefix': 'wu'
+    'body': 'with ${1}; use $1;\n$0'
+  'with …;':
+    'prefix': 'w'
+    'body': 'with $1;'
