@@ -2,13 +2,10 @@
   "name": "language-ada",
   "version": "0.0.0",
   "description": "Ada language support in Atom",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zoddy/atom-language-ada.git"
-  },
+  "repository": "https://github.com/zoddy/atom-language-ada.git",
   "license": "MIT",
   "engines": {
-    "atom": "*"
+    "atom": ">=0.50.0"
   },
   "dependencies": {
   }
