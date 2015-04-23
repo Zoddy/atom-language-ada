@@ -1,5 +1,6 @@
 comment: "Ada -- chris@cjack.com. Feel free to modify, distribute, be happy. Share and enjoy."
 fileTypes: [
+  "ada"
   "adb"
   "ads"
 ]
