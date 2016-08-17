@@ -61,13 +61,21 @@ patterns: [
     name: "constant.language.ada"
   }
   {
+    match: "(;|\\.|\\(|\\)|,)"
+    name: "keyword.other.unit.ada"
+  }
+  {
+    match: "(:\=|\/\=|\=)"
+    name: "keyword.other.ada"
+  }
+  {
     begin: "\""
     beginCaptures:
-      "0":
+      "1":
         name: "punctuation.definition.string.begin.ada"
     end: "\""
     endCaptures:
-      "0":
+      "1":
         name: "punctuation.definition.string.end.ada"
     name: "string.quoted.double.ada"
     patterns: [
