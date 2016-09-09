@@ -7,7 +7,7 @@ fileTypes: [
 name: "Ada"
 patterns: [
   {
-    match: "\=>|\\b(?i:(abort|abs|abstract|accept|access|aliased|all|and|array|at|body|case|constant|declare|delay|delta|digits|do|else|elsif|end if|entry|exception|exit|for|function|generic|goto|if|in|interface|is|limited|loop|mod|new|not|null|of|or|others|out|overriding|pragma|private|procedure|protected|raise|range|record|rem|renames|requeue|return|reverse|select|separate|some|subtype|synchronized|tagged|task|terminate|then|type|until|use|when|while|with|xor))\\b"
+    match: "\=>|\\b(?i:(abort|abs|abstract|accept|access|aliased|all|and|array|at|body|case|constant|declare|delay|delta|digits|do|else|elsif|end case|end if|end loop|entry|exception|exit|for|function|generic|goto|if|in|interface|is|limited|loop|mod|new|not|null|of|or|others|out|overriding|pragma|private|procedure|protected|raise|range|record|rem|renames|requeue|return|reverse|select|separate|some|subtype|synchronized|tagged|task|terminate|then|type|until|use|when|while|with|xor))\\b"
     name: "keyword.other.ada"
   }
   {
@@ -65,7 +65,7 @@ patterns: [
     name: "keyword.other.unit.ada"
   }
   {
-    match: "(:\=|\/\=|\=|<\=|>\=)"
+    match: "(:\=|\/\=|\=|<\=|>\=|<|>)"
     name: "keyword.other.ada"
   }
   {
