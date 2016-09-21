@@ -65,12 +65,12 @@ patterns: [
     name: "constant.language.ada"
   }
   {
-    match: "(;|\\.|\\(|\\)|,|:)"
-    name: "keyword.other.unit.ada"
-  }
-  {
     match: "(:\=|\/\=|\=|<\=|>\=|<|>)"
     name: "keyword.other.ada"
+  }
+  {
+    match: "(;|\\.|\\(|\\)|,|:)"
+    name: "keyword.other.unit.ada"
   }
   {
     begin: "\""
