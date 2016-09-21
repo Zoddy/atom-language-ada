@@ -7,7 +7,7 @@ fileTypes: [
 name: "Ada"
 patterns: [
   {
-    match: "\=>|\\b(?i:(abort|abs|abstract|accept|access|aliased|all|and|array|at|body|case|constant|declare|delay|delta|digits|do|else|elsif|end case|end if|end loop|entry|exception|exit|for|function|generic|goto|if|in|interface|is|limited|loop|mod|new|not|null|of|or|others|out|overriding|pragma|private|procedure|protected|raise|range|record|rem|renames|requeue|return|reverse|select|separate|some|subtype|synchronized|tagged|task|terminate|then|type|until|use|when|while|with|xor))\\b"
+    match: "\=>|\\b(?i:(abort|abs|abstract|accept|access|aliased|all|and|array|at|body|case|constant|declare|delay|delta|digits|do|else|elsif|end case|end if|end loop|end record|entry|exception|exit|for|generic|goto|if|in|interface|is|limited|loop|mod|new|not|null|of|or|others|out|overriding|pragma|private|protected|raise|range|record|rem|renames|requeue|return|reverse|select|separate|some|subtype|synchronized|tagged|task|terminate|then|type|until|use|when|while|with|xor))\\b"
     name: "keyword.other.ada"
   }
   {
@@ -50,7 +50,11 @@ patterns: [
   }
   {
     match: "\\b(?i:(begin|end|package))\\b"
-    name: "keyword.control.ada"
+    name: "storage.type.function.ada"
+  }
+  {
+    match: "\\b(?i:(boolean|string|natural))\\b"
+    name: "storage.type.primitive.ada"
   }
   {
     match: "\\b(?i:([0-9](_?[0-9])*((#[0-9a-f](_?[0-9a-f])*#((e(\\+|-)?[0-9](_?[0-9])*\\b)|\\B))|((\\.[0-9](_?[0-9])*)?(e(\\+|-)?[0-9](_?[0-9])*)?\\b))))"
@@ -61,7 +65,7 @@ patterns: [
     name: "constant.language.ada"
   }
   {
-    match: "(;|\\.|\\(|\\)|,)"
+    match: "(;|\\.|\\(|\\)|,|:)"
     name: "keyword.other.unit.ada"
   }
   {
