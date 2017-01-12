@@ -3,4 +3,4 @@
     increaseIndentPattern: "\\b(?i:(loop|declare|begin|exception|when|is|then|else|task)[^;]*$)\\b"
     decreaseIndentPattern: "\\b(begin|end|else)\\b"
     foldEndPattern: "\\b(?i:(end))\\b"
-    commentStart: "--"
+    commentStart: "-- "
