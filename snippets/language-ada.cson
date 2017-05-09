@@ -77,9 +77,9 @@
     body: '''
       procedure ${1:Procedure} is
       	$2
-      begin -- ${1/([a-zA-Z0-9_]*).*$/$1/}
+      begin -- $1
       	$0
-      end ${1/([a-zA-Z0-9_]*).*$/$1/};
+      end $1;
     '''
   "record … end record":
     prefix: "rec"

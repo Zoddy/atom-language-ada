@@ -36,6 +36,14 @@ patterns: [
     name: "meta.function.ada"
   }
   {
+    match: "\\b(?i:(begin|end|package))\\b"
+    name: "keyword.control.ada"
+  }
+  {
+    match: "\\b(?i:(\\=>|abort|abs|abstract|accept|access|aliased|all|and|array|at|body|case|constant|declare|delay|delta|digits|do|else|elsif|entry|exception|exit|for|function|generic|goto|if|in|interface|is|limited|loop|mod|new|not|null|of|or|others|out|overriding|pragma|private|procedure|protected|raise|range|record|rem|renames|requeue|return|reverse|select|separate|some|subtype|synchronized|tagged|task|terminate|then|type|until|use|when|while|with|xor))\\b"
+    name: "keyword.other.ada"
+  }
+  {
     captures:
       "1":
         name: "keyword.control.import.ada"
@@ -43,14 +51,6 @@ patterns: [
         name: "string.unquoted.import.ada"
     match: "(^|[\\r\\n])((?i:((limited[ \\t]*)?(private[ \\t]*)?with))[ \\t]+(\\w+(\\.\\w+)*);[ \\t]*)+"
     name: "meta.function.ada"
-  }
-  {
-    match: "\\b(?i:(begin|end|package))\\b"
-    name: "keyword.control.ada"
-  }
-  {
-    match: "\\b(?i:(\\=>|abort|abs|abstract|accept|access|aliased|all|and|array|at|body|case|constant|declare|delay|delta|digits|do|else|elsif|entry|exception|exit|for|function|generic|goto|if|in|interface|is|limited|loop|mod|new|not|null|of|or|others|out|overriding|pragma|private|procedure|protected|raise|range|record|rem|renames|requeue|return|reverse|select|separate|some|subtype|synchronized|tagged|task|terminate|then|type|until|use|when|while|with|xor))\\b"
-    name: "keyword.other.ada"
   }
   {
     match: "\\b(?i:([0-9](_?[0-9])*((#[0-9a-f](_?[0-9a-f])*#((e(\\+|-)?[0-9](_?[0-9])*\\b)|\\B))|((\\.[0-9](_?[0-9])*)?(e(\\+|-)?[0-9](_?[0-9])*)?\\b))))"
